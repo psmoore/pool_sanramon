@@ -370,8 +370,9 @@
         // Days whose hours differ from that weekday's regular hours, through the last scheduled day.
         const w = weekly(evs, inProgram, true, true);
         const open = evs.filter((o) => !o.allDay && inProgram(o));
-        const lastDay = [...open.map((o) => o.date), ...evs.filter(isClosure).map((o) => o.endDate || o.date)]
-          .filter((d) => d <= addDays(TODAY, 90)).reduce((m, d) => (d > m ? d : m), TODAY);
+        // Through the program's last scheduled day: past the end of a season with no next season entered yet, a holiday
+        // closure would turn every remaining day into "Closed".
+        const lastDay = open.map((o) => o.date).filter((d) => d <= addDays(TODAY, 90)).reduce((m, d) => (d > m ? d : m), TODAY);
         const rows = [];
         for (let d = TODAY; d <= lastDay && rows.length < 12; d = addDays(d, 1)) {
           const closure = evs.find((o) => isClosure(o) && o.date <= d && (o.endDate || o.date) >= d);
