@@ -39,6 +39,7 @@
   const KINDS = {
     lap: { label: "Lap swim" },
     learn: { label: "Classes & teams" },
+    fit: { label: "Water fitness" },
   };
   function kindsOf(o, groupName) {
     const names = (o.groupIds || []).map((g) => groupName[g] || "").join(" ") + " " + o.title;

@@ -13,7 +13,7 @@ BOTH = "srop|dvac"
 SITE = "https://www.sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/aquatics"
 REG = "https://www.sanramonrecguide.com"
 POOLS = [
-    dict(slug="srop", name="San Ramon Olympic Pool & Aquatic Park", short="Olympic Pool", facility="San Ramon Olympic Pool & Aquatic Park",
+    dict(slug="srop", name="San Ramon Olympic Pool & Aquatic Park", short="San Ramon Olympic Pool", facility="San Ramon Olympic Pool & Aquatic Park",
          area="San Ramon", kind="yearRound", address="9900 Broadmoor Dr, San Ramon, CA 94583", phone="(925) 973-3240", href="olympic-pool.html",
          blurb="A 50-meter Olympic pool with diving boards, a 25-yard lap pool and the Aquatic Park play pool, next to California High "
                "School. Lap swim, swim teams, Masters and aqua aerobics, year-round."),
